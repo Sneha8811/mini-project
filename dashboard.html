@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Admin Dashboard</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Montserrat Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -13,117 +13,238 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="bar.css">
+    <link rel="stylesheet" href="eventsche.css">
   </head>
   <body>
     <div class="grid-container">
 
-      <!-- Header -->
-      <header class="header">
-        <div class="menu-icon" onclick="openSidebar()">
-          <span class="material-icons-outlined">menu</span>
-        </div>
-        <div class="header-left">
-          <span class="material-icons-outlined">search</span>
-        </div>
-        <div class="header-right">
-          <span class="material-icons-outlined">notifications</span>
-          <span class="material-icons-outlined">email</span>
-          <span class="material-icons-outlined">account_circle</span>
-        </div>
-      </header>
-      <!-- End Header -->
+     
 
-      <!-- Sidebar -->
-      <aside id="sidebar">
-        <div class="sidebar-title">
-          <div class="sidebar-brand">
-            <span class="material-icons-outlined"></span> Admin dashboard
+      <!--sidebar---->
+
+    <div class="sidebar close">
+
+      <div class="logo-details">
+          <h2 style="color: #fff; text-align: center; text-transform: uppercase; letter-spacing: 0.5px;">Admin Dashboard</h2>
+      </div>
+      <ul class="nav-links">
+        <li class="nav-1">
+          <a href="#">
+          <!-- <span class="link_name active">Dashboard</span> -->
+          </a>
+          <p style="color: white;">Dashboard</p>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Manage</a></li>
+            <li><a href="#">Add</a></li>
+          </ul>
+        </li>
+        <li class="nav-2">
+          <div class="iocn-link">
+            <a href="#">
+            <p style="color: white;">Patients</p>
+            <!-- <span class="link_name">Patients</span> -->
+            </a>
+            <i class='bx bxs-chevron-down arrow'></i>
           </div>
-          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
-        </div>
-
-        <ul class="sidebar-list">
-          <li class="sidebar-list-item">
-            <span class="material-icons-outlined"></span> Dashboard
-          </li>
-          <li class="sidebar-list-item">
-            <span class="material-icons-outlined"></span> Patients
-          </li>
-          <li class="sidebar-list-item">
-            <span class="material-icons-outlined"></span> Hospitals
-          </li>
-          <li class="sidebar-list-item"> 
-            <span class="material-icons-outlined"></span> Care centers
-          </li>
-          <li class="sidebar-list-item">
-            <span class="material-icons-outlined"></span> Seat availability
-          </li>
-          <li class="sidebar-list-item">
-            <span class="material-icons-outlined"></span> Admission history
-          </li>
-        </ul>
-      </aside>
-      <!-- End Sidebar -->
-
-      <!-- Main -->
-      <main class="main-container">
-        <div class="main-title">
-          <p class="font-weight-bold">DASHBOARD</p>
-        </div>
-
-        <div class="main-cards">
-
-          <div class="card">
-            <div class="card-inner">
-              <p class="text-primary">PRODUCTS</p>
-              <span class="material-icons-outlined text-blue">inventory_2</span>
-            </div>
-            <span class="text-primary font-weight-bold">249</span>
-          </div>
-
-          <div class="card">
-            <div class="card-inner">
-              <p class="text-primary">PURCHASE ORDERS</p>
-              <span class="material-icons-outlined text-orange">add_shopping_cart</span>
-            </div>
-            <span class="text-primary font-weight-bold">83</span>
-          </div>
-
-          <div class="card">
-            <div class="card-inner">
-              <p class="text-primary">SALES ORDERS</p>
-              <span class="material-icons-outlined text-green">shopping_cart</span>
-            </div>
-            <span class="text-primary font-weight-bold">79</span>
-          </div>
-
-          <div class="card">
-            <div class="card-inner">
-              <p class="text-primary">INVENTORY ALERTS</p>
-              <span class="material-icons-outlined text-red">notification_important</span>
-            </div>
-            <span class="text-primary font-weight-bold">56</span>
-          </div>
-
-        </div>
-
-        <div class="charts">
-
-          <div class="charts-card">
-            <p class="chart-title">Top 5 Products</p>
-            <div id="bar-chart"></div>
-          </div>
-
-          <div class="charts-card">
-            <p class="chart-title">Purchase and Sales Orders</p>
-            <div id="area-chart"></div>
-          </div>
-
-        </div>
-      </main>
-      <!-- End Main -->
-
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Manage</a></li>
+            <li><a href="#">Add</a></li>
+          </ul>
+        </li>
+        <li class="nav-3">
+          <a href="#">
+          <p style="color: white;">Hospital</p>
+          <!-- <span class="link_name">Hospital</span> -->
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Manage</a></li>
+            <li><a href="#">Add</a></li>
+          </ul>
+        </li>
+        <li class="nav-4">
+          <a href="#">
+              <p style="color: white;">Care center</p>
+          <!-- <span class="link_name">Care center</span> -->
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Manage</a></li>
+            <li><a href="#">Add</a></li>
+          </ul>
+        </li>
+        <li class="nav-5">
+          <a href="#">
+          <p style="color: white;">AdmissionHistory</p>
+          <!-- <span class="link_name">Admission history</span> -->
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Manage </a></li>
+            <li><a href="#">Add</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
+      <div class="main1">
+        <div class="search-all">
+          <div class="search1">
+            <form action="/action_page.php" method="get">
+              <label for="hosp">Hospital</label><br><br>
+              <input list="hosps" name="hosp" id="hosp" placeholder="search">
+              <datalist id="hosps">
+                <option value="KMCH Hospital">
+                <option value="Savidha Hospital">
+                <option value="SMS Hospital">
+                <option value="SSS Hospital">
+                <option value="XXX Hospital">
+              </datalist>
+            </form>
+          </div>
+          <div class="search2">
+            <form action="/action_page.php" method="get">
+              <label for="state">State</label><br><br>
+              <input list="states" name="state" id="state" placeholder="search">
+              <datalist id="states">
+                <option value="Tamil Nadu">
+                <option value="Maharashtra">
+                <option value="Andhra Pradesh">
+                <option value="Karnataka">
+                <option value="Kerala">
+              </datalist>
+            </form>
+          </div>
+          <div class="search3">
+            <form action="/action_page.php" method="get">
+              <label for="city">City</label><br><br>
+              <input list="cities" name="city" id="city" placeholder="search">
+              <datalist id="cities">
+                <option value="Coimbatore">
+                <option value="Chennai">
+                <option value="Madurai">
+                <option value="Trichy">
+                <option value="Krishnagiri">
+              </datalist>
+            </form>
+          </div>
+        </div>
+        <div class="cont">
+          <ul>
+              <li class="item_wrap monday online">
+                  <div class="item">
+                      <div class="item_left">
+                          <div class="data">
+                              <p class="name">KMCH Hospital</p>
+                              <div class="para">
+                                  <p>160-1 KMCH hospital,Sitra road</p>
+                                  <br>
+                                  <p class="location"><span>City: </span>Coimbatore</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="item_right">
+                         <div class="status" style="color: black;">Edit</div>
+                      </div>
+                  </div>
+              </li>
+              <li class="item_wrap monday online">
+                  <div class="item">
+                      <div class="item_left">
+                          <div class="data">
+                              <p class="name">Ganga Hospital</p>
+                          <div class="para">
+                                  <p>190 Ganga hospital , Saibaba colony</p>
+                                  <br>
+                                  <p class="location"><span>City: </span>Coimbatore</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="item_right">
+                          <div class="status" style="color: black;">Edit</div>
+                      </div>
+                  </div>
+              </li>
+              <li class="item_wrap monday online">
+                <div class="item">
+                    <div class="item_left">
+                        <div class="data">
+                            <p class="name">Ganga Hospital</p>
+                        <div class="para">
+                                <p>190 Ganga hospital , Saibaba colony</p>
+                                <br>
+                                <p class="location"><span>City: </span>Coimbatore</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item_right">
+                        <div class="status" style="color: black;">Edit</div>
+                    </div>
+                </div>
+              </li>
+              <li class="item_wrap monday online">
+                <div class="item">
+                    <div class="item_left">
+                        <div class="data">
+                            <p class="name">Ganga Hospital</p>
+                        <div class="para">
+                                <p>190 Ganga hospital , Saibaba colony</p>
+                                <br>
+                                <p class="location"><span>City: </span>Coimbatore</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item_right">
+                        <div class="status" style="color: black;">Edit</div>
+                    </div>
+                </div>
+              </li>
+              <li class="item_wrap monday online">
+                <div class="item">
+                    <div class="item_left">
+                        <div class="data">
+                            <p class="name">Ganga Hospital</p>
+                        <div class="para">
+                                <p>190 Ganga hospital , Saibaba colony</p>
+                                <br>
+                                <p class="location"><span>City: </span>Coimbatore</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item_right">
+                        <div class="status" style="color: black;">Edit</div>
+                    </div>
+                </div>
+             </li>
+              
+              
+            
+          
+          
+          <li class="item_wrap wednesday offline">
+                  <div class="item">
+                      <div class="item_left">
+                          <div class="data">
+                              <p class="name">Event 11</p>
+                              <p class="distance"><i>10:00<span> AM </span>- 11:00<span>AM</span></i></p>
+                          <div class="para">
+                                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque perspiciatis tempora nulla maiores. Quis, ratione maiores sequi voluptatibus nesciunt illum aliquid, numquam tenetur dolore est atque mollitia nisi, qui magnam!</p>
+                                  <br>
+                                  <p class="location"><span>LOCATION: </span>Gmeet</p>
+                              <p class="locat"><span>14 </span><span>Nov,</span><span>2021 </span></p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="item_right">
+                          <div class="status">Edit</div>
+                      </div>
+                  </div>
+                </li>
+            </ul>
+        </div>
+   
+
+
+  </div>
+</div>
+ 
 
     <!-- Scripts -->
     <!-- ApexCharts -->
