@@ -6,6 +6,14 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+.grid-container{
+  display: flex;
+}
+.main1{
+  width: calc(100% - 350px);
+  position: absolute;
+  right: 0px;
+}
 .sidebar{
   position: fixed;
   top: 0;
