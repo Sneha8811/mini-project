@@ -11,6 +11,17 @@ body {
     color: #666666;
     font-family: "Montserrat", sans-serif;
   }
+  .header {
+    grid-area: header;
+    height: 70px;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 0 30px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+  }
   
   .material-icons-outlined {
     vertical-align: middle;
@@ -61,6 +72,7 @@ body {
   .search-all{
     display: flex;
     width: 100%;
+    margin-top: 100px;
     justify-content: space-evenly;
     padding: 30px;
  }
